@@ -1,0 +1,36 @@
+BASE_PATH="/Volumes/data_lakehouse_project/bronze/raw_data"
+
+INGESTION_CONFIG = [
+    #CRM
+    {
+        "source":"crm",
+        "path":f"{BASE_PATH}/source_crm/cust_info.csv",
+        "table":"data_lakehouse_project.bronze.bronze_cust_info"
+    },
+    {
+        "source":"crm",
+        "path":f"{BASE_PATH}/source_crm/prd_info.csv",
+        "table":"data_lakehouse_project.bronze.bronze_prd_info"
+    },
+    {
+        "source":"crm",
+        "path":f"{BASE_PATH}/source_crm/sales_details.csv",
+        "table":"data_lakehouse_project.bronze.bronze_sales_details"
+    },
+    #ERP
+    {
+        "source":"erp",
+        "path":f"{BASE_PATH}/source_erp/CUST_AZ12.csv",
+        "table":"data_lakehouse_project.bronze.bronze_cust_az12"
+    },
+    {
+        "source":"erp",
+        "path":f"{BASE_PATH}/source_erp/LOC_A101.csv",
+        "table":"data_lakehouse_project.bronze.bronze_log_a101"
+    },
+    {
+        "source":"erp",
+        "path":f"{BASE_PATH}/source_erp/PX_CAT_G1V2.csv",
+        "table":"data_lakehouse_project.bronze.bronze_px_cat_g1v2"
+    }
+]
